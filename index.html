@@ -9,54 +9,6 @@
 This is the structure you get after you would assign bio.display = function() {bio = {
 It's just more organized than having another variable outside, like the variable might be:
 ENCAPSULATION
-bio = {
-  name: 'John Buck',
-  role: 'Web Developer',
-  contacts: {
-    mobile: '650-555-5555',
-    email: 'john@example.com',
-    github: 'johnbuck',
-    twitter: '@JohnBuck',
-    location: 'San Francisco'
-  },
-
-  /* maybe more stuff */
-
-  display: function() {
-    var name = HTMLheaderName.replace('%data%', bio['name']);
-    
-    $('#header').prepend(name);
-  }
-};
-
-bio.display();
-
-so in basic words encapsulation is better way to organize and make it more oop?
-
-Yes, so true Serhiy.
-
-OTHER EXAPLE THIS IS NOT ENCAPSULATED
-var bio = {
-  name: 'John Buck',
-  role: 'Web Developer',
-  contacts: {
-    mobile: '650-555-5555',
-    email: 'john@example.com',
-    github: 'johnbuck',
-    twitter: '@JohnBuck',
-    location: 'San Francisco'
-  },
-
-  /* maybe more stuff */
-};
-
-var bioDisplay = function() {
-    var name = HTMLheaderName.replace('%data%', bio['name']);
-    
-    $('#header').prepend(name);
-  }
-};
-
-bioDisplay();
+bio = {\r\nname: \'John Buck\',\r\nrole: \'Web Developer\',\r\ncontacts: {\r\nmobile: \'650-555-5555\',\r\nemail: \'john@example.com\',\r\ngithub: \'johnbuck\',\r\ntwitter: \'@JohnBuck\',\r\nlocation: \'San Francisco\'\r\n},\r\n\/* maybe more stuff *\/\r\ndisplay: function() {\r\nvar name = HTMLheaderName.replace(\'%data%\', bio[\'name\']);\r\n$(\'#header\').prepend(name);\r\n}\r\n};\r\nbio.display();\r\nso in basic words encapsulation is better way to organize and make it more oop?\r\nYes, so true Serhiy.\r\nOTHER EXAPLE THIS IS NOT ENCAPSULATED\r\nvar bio = {\r\nname: \'John Buck\',\r\nrole: \'Web Developer\',\r\ncontacts: {\r\nmobile: \'650-555-5555\',\r\nemail: \'john@example.com\',\r\ngithub: \'johnbuck\',\r\ntwitter: \'@JohnBuck\',\r\nlocation: \'San Francisco\'\r\n},\r\n\/* maybe more stuff *\/\r\n};\r\nvar bioDisplay = function() {\r\nvar name = HTMLheaderName.replace(\'%data%\', bio[\'name\']);\r\n$(\'#header\').prepend(name);\r\n}\r\n};\r\nbioDisplay();
 </body>
 </html>
