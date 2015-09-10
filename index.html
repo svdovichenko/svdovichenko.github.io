@@ -5,5 +5,57 @@
 <p>I'm hosted with GitHub Pages.</p>
 <a href="project1/project1.html" > project 1 </a>
 <a href="#home">Home</a>
+
+This is the structure you get after you would assign bio.display = function() {bio = {
+It's just more organized than having another variable outside, like the variable might be:
+ENCASULATION
+  name: 'John Buck',
+  role: 'Web Developer',
+  contacts: {
+    mobile: '650-555-5555',
+    email: 'john@example.com',
+    github: 'johnbuck',
+    twitter: '@JohnBuck',
+    location: 'San Francisco'
+  },
+
+  /* maybe more stuff */
+
+  display: function() {
+    var name = HTMLheaderName.replace('%data%', bio['name']);
+    
+    $('#header').prepend(name);
+  }
+};
+
+bio.display();
+
+so in basic words encapsulation is better way to organize and make it more oop?
+
+Yes, so true Serhiy.
+
+OTHER EXAPLE THIS IS NOT ENCAPSULATED
+var bio = {
+  name: 'John Buck',
+  role: 'Web Developer',
+  contacts: {
+    mobile: '650-555-5555',
+    email: 'john@example.com',
+    github: 'johnbuck',
+    twitter: '@JohnBuck',
+    location: 'San Francisco'
+  },
+
+  /* maybe more stuff */
+};
+
+var bioDisplay = function() {
+    var name = HTMLheaderName.replace('%data%', bio['name']);
+    
+    $('#header').prepend(name);
+  }
+};
+
+bioDisplay();
 </body>
 </html>
