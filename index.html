@@ -58,5 +58,23 @@ var bioDisplay = function() {<br>
 };<br>
 
 bioDisplay();<br>
+<h1> Project 3 </h1>
+var Car = function(c, d, n) {<br>
+    this.color = c;<br>
+    this.doors = d;<br>
+    this.name = n;<br>
+};
+
+Car.prototype.drive = function() {<br>
+    console.log(this.name + " goes vroom vroom vroom");<br>
+};
+
+
+var jolene = new Car('red', 2, 'Jolene');<br>
+
+var benny = new Car('gray', 4, 'Ben');<br>
+
+jolene.drive();<br>
+benny.drive();<br>
 </body>
 </html>
